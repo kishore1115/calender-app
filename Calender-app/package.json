@@ -1,0 +1,25 @@
+{
+  "name": "calender-app",
+  "version": "1.0.0",
+  "description": "A calender application for tracking communication with companies.",
+  "main": " src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CharithaReddyGadi/calendar-app.git"
+  },
+  "keywords": [
+    "calender",
+    "communication",
+    "tracking"
+  ],
+  "author": "Charitha Gadi",
+  "license": "MIT"
+}

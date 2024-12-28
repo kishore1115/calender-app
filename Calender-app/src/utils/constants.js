@@ -1,0 +1,1 @@
+export const DEFAULT_PERIODICITY = '2 weeks';
