@@ -1,23 +1,27 @@
-import React from 'react';
-import FullCalendar from '@fullcalendar/react';
-import dayGridPlugin from '@fullcalendar/daygrid';
+// src/components/UserModule/CalendarView.js
+import React, { useState } from 'react';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
-const CalendarView = ({ communications }) => {
-    const events = communications.map(comm => ({
-        title: comm.type,
-        date: comm.date,
-    }));
+const CalendarView = () => {
+  const [selectedDate, setSelectedDate] = useState(null);
 
-    return (
-        <div>
-            <h2>Calendar View</h2>
-            <FullCalendar
-                plugins={[dayGridPlugin]}
-                initialView="dayGridMonth"
-                events={events}
-            />
+  const handleDateClick = (date) => {
+    setSelectedDate(date);
+    alert(`Selected date: ${date.toLocaleDateString()}`);
+  };
+
+  return (
+    <div className="calendar-container">
+      <h2>Calendar View</h2>
+      <Calendar onClickDay={handleDateClick} />
+      {selectedDate && (
+        <div className="selected-date">
+          <p>You selected: {selectedDate.toLocaleDateString()}</p>
         </div>
-    );
+      )}
+    </div>
+  );
 };
 
 export default CalendarView;
